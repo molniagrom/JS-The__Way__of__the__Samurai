@@ -40,7 +40,9 @@
         correctAnswerCount = correctAnswerCount + 1;
     }
 
-    if (correctAnswerCount / wordsCount * 100 > correctAnswersMinPercent) {
+    const userCorrectAnswerPercent = correctAnswerCount / wordsCount * 100;
+
+    if (userCorrectAnswerPercent > correctAnswersMinPercent) {
         alert(finishSuccessMessage);
     } else {
         alert(finishUnSuccessMessage);
