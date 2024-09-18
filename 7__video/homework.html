@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>homework</title>
+</head>
+<body>
+
+<!--Версия вёрстки-->
+
+<!--<h1>Muffins</h1>-->
+
+<!--<img src="https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png"-->
+<!--     alt="01">-->
+<!--<img src="https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png"-->
+<!--     alt="02">-->
+<!--<img src="https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png"-->
+<!--     alt="03">-->
+
+<!--<h2>Ingredient list:</h2>-->
+<!--<ul>-->
+<!--    <li><span class="bold">2 cups</span> all-purpose flour</li>-->
+<!--    <li><span class="bold">3 teaspoons</span> baking powder</li>-->
+<!--    <li><span class="bold">1/2 teaspoon</span> salt</li>-->
+<!--    <li><span class="bold">3/4 item</span> white sugar</li>-->
+<!--    <li><span class="bold">1 item</span> egg</li>-->
+<!--    <li><span class="bold">1 cup</span> milk</li>-->
+<!--</ul>-->
+
+<script>
+
+<!--Версия JS-->
+
+    // Заголовок статьи
+    const articleTitle = "Muffins";
+
+    // Массив с изображениями
+    const articleImages = [
+        "https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png",
+        "https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png",
+        "https://production-it-incubator.s3.eu-central-1.amazonaws.com/it-kamasutra/Image/15a7634b-816c-416a-9c3e-3e993d3f88f4_muffins.png"
+    ];
+
+    // Список ингредиентов
+    const ingredients = [
+        "2 cups all-purpose flour",
+        "3 teaspoons baking powder",
+        "1/2 teaspoon salt",
+        "3/4 cup white sugar",
+        "1 egg",
+        "1 cup milk"
+    ];
+
+    // Функция для создания и добавления заголовка
+    const createHeader = (title) => {
+        const header = document.createElement('h1');
+        header.textContent = title;
+        document.body.appendChild(header);
+    };
+
+    // Функция для создания и добавления изображений
+    const createImages = (images) => {
+        images.forEach((src, index) => {
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = `Image ${index + 1}`;
+            document.body.appendChild(img);
+        });
+    };
+
+    // Функция для создания и добавления списка ингредиентов
+    const createIngredientList = (ingredients) => {
+        const ul = document.createElement('ul');
+        ingredients.forEach(ingredient => {
+            const li = document.createElement('li');
+            li.innerHTML = `<span class="bold">${ingredient.split(" ")[0]}</span> ${ingredient.slice(ingredient.indexOf(" ") + 1)}`;
+            ul.appendChild(li);
+        });
+        document.body.appendChild(ul);
+    };
+
+    // Создание заголовка статьи
+    createHeader(articleTitle);
+    // Создание изображений
+    createImages(articleImages);
+    // Создание списка ингредиентов
+    createIngredientList(ingredients);
+
+</script>
+</body>
+</html>
