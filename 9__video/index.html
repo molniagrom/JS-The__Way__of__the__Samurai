@@ -8,6 +8,45 @@
 <body>
 
 <script>
+    const word0 = "Wassup";
+    const word0translation = "Здарова";
+    const word1 = "Bye";
+    const word1translation = "Покеда";
+    const word2 = "Programmer";
+    const word2translation = "Программист";
+    const wordsCount = 3;
+    const finishSuccessMessage = "Молодец. Good result!";
+    const finishUnSuccessMessage = "Молодец, но постарайся лучше.";
+    const correctAnswersMinPercent = 50;
+    let correctAnswerCount = 0;
+
+    // --------------------------------------
+
+    const userAnswer0 = prompt(word0);
+    alert(userAnswer0 === word0translation)
+    if (userAnswer0 === word0translation) {
+        correctAnswerCount = correctAnswerCount + 1;
+    }
+
+    const userAnswer1 = prompt(word1);
+    alert(userAnswer1 === word1translation)
+    if (userAnswer1 === word1translation) {
+        correctAnswerCount = correctAnswerCount + 1;
+    }
+
+    const userAnswer2 = prompt(word2);
+    alert(userAnswer2 === word2translation)
+    if (userAnswer2 === word2translation) {
+        correctAnswerCount = correctAnswerCount + 1;
+    }
+
+    const userCorrectAnswerPercent = correctAnswerCount / wordsCount * 100;
+
+    if (userCorrectAnswerPercent > correctAnswersMinPercent) {
+        alert(finishSuccessMessage);
+    } else {
+        alert(finishUnSuccessMessage);
+    }
 
 </script>
 
