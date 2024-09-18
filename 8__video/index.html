@@ -17,6 +17,7 @@
     const wordsCount = 3;
     const finishSuccessMessage = "Молодец. Good result!";
     const finishUnSuccessMessage = "Молодец, но постарайся лучше.";
+    const correctAnswersMinPercent = 50;
     let correctAnswerCount = 0;
 
     // --------------------------------------
@@ -39,7 +40,7 @@
         correctAnswerCount = correctAnswerCount + 1;
     }
 
-    if (correctAnswerCount / wordsCount * 100 > 50) {
+    if (correctAnswerCount / wordsCount * 100 > correctAnswersMinPercent) {
         alert(finishSuccessMessage);
     } else {
         alert(finishUnSuccessMessage);
