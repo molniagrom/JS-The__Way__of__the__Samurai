@@ -9,6 +9,26 @@
 
 <script>
 
+    let balance = 100;
+    // ....................................................
+
+    document.write('START', '<br>');
+
+    const product1PriceString = window.prompt('How much does the product cost?');
+    const product1Price = Number(product1PriceString);
+
+    if (window.isNaN(product1Price)) {
+        document.write('You input incorrect number');
+    } else {
+        const balance = 100; // Пример суммы на счету
+        if (balance > product1Price) {
+            document.write('Not enough money');
+        } else {
+            document.write('Product purchased');
+        }
+    }
+
+    document.write('<br>', 'END');
 </script>
 
 
