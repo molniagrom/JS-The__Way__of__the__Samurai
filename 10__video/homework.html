@@ -7,6 +7,28 @@
 <body>
 <script>
 
+    let balance = 100;
+    const productPrice = 110;
+    // ....................................................
+
+    document.write('START', '<br>');
+
+    // if (balance >= productPrice) {
+    // if (productPrice <= balance) {
+    //     document.write('Product purchased');
+    // } else {
+    //     document.write('Not enough money');
+    // }
+
+
+    if (productPrice > balance) {
+        document.write('Not enough money');
+    } else {
+        document.write('Product purchased');
+    }
+
+
+    document.write('<br>', 'END');
 </script>
 </body>
 </html>
