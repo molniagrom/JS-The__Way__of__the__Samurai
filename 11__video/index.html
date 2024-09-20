@@ -15,17 +15,17 @@ let product2Cost;
 product1Cost = 200;
 product2Cost = 100;
 console.log(product1Cost > product2Cost); // true
-console.log(product1Cost - product2Cost); // 100
+console.log((product1Cost - product2Cost) > 0); // 100
 
 product1Cost = 100;
 product2Cost = 100;
 console.log(product1Cost === product2Cost); // true
-console.log(product1Cost - product2Cost); // 0
+console.log((product1Cost - product2Cost) === 0); // 0
 
 product1Cost = 100;
 product2Cost = 200;
 console.log(product1Cost < product2Cost); // true
-console.log(product1Cost - product2Cost); // -100
+console.log((product1Cost - product2Cost) < 0); // true
 
 </script>
 
