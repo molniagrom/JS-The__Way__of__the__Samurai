@@ -6,7 +6,89 @@
 </head>
 <body>
 <script>
+    let balance = 100;
+    let currentBalance = balance;
 
+    // Вывод сообщения о начале работы
+    document.write('START', '<br>');
+
+    // Запрос стоимости первого продукта у пользователя
+    let productPriceString = window.prompt('How much does the product cost?');
+    // Преобразование введённой строки в число
+    let productPrice = Number(productPriceString);
+
+    // Проверка и обработка покупки первого продукта
+    // Если введённое значение не является числом
+    if (window.isNaN(productPrice)) {
+        // Вывод сообщения об ошибке
+        document.write('You input incorrect number<br>');
+    } else {
+        // Если текущего баланса недостаточно для покупки
+        if (currentBalance < productPrice) {
+            // Вывод сообщения о нехватке денег
+            document.write('Not enough money<br>');
+            // Обновление текущего баланса (неправильное место для этого, нужно убрать)
+            currentBalance = balance - productPrice;
+        } else {
+            // Уменьшение текущего баланса на цену продукта
+            currentBalance -= productPrice;
+            // Вывод сообщения о покупке
+            document.write('The first product purchased<br>');
+        }
+    }
+    // Вывод сообщения о завершении обработки первого продукта
+    document.write('<br>', 'END');
+
+    // Запрос стоимости второго продукта у пользователя
+    productPriceString = window.prompt('How much does the second product cost?');
+    // Преобразование введённой строки в число
+    productPrice = Number(productPriceString);
+
+    // Проверка и обработка покупки второго продукта
+    // Если введённое значение не является числом
+    if (window.isNaN(productPrice)) {
+        // Вывод сообщения об ошибке
+        document.write('You input incorrect number<br>');
+    } else {
+        // Если текущего баланса недостаточно для покупки
+        if (currentBalance < productPrice) {
+            // Вывод сообщения о нехватке денег
+            document.write('Not enough money<br>');
+        } else {
+            // Уменьшение текущего баланса на цену продукта
+            currentBalance -= productPrice;
+            // Вывод сообщения о покупке
+            document.write('The second product purchased<br>');
+        }
+    }
+    // Вывод сообщения о завершении обработки второго продукта
+    document.write('<br>', 'END');
+
+    // Запрос стоимости третьего продукта у пользователя
+    productPriceString = window.prompt('How much does the third product cost?');
+    // Преобразование введённой строки в число
+    productPrice = Number(productPriceString);
+
+    // Проверка и обработка покупки третьего продукта
+    // Если введённое значение не является числом
+    if (window.isNaN(productPrice)) {
+        // Вывод сообщения об ошибке
+        document.write('You input incorrect number<br>');
+    } else {
+        // Если текущего баланса недостаточно для покупки
+        if (currentBalance < productPrice) {
+            // Вывод сообщения о нехватке денег
+            document.write('Not enough money<br>');
+        } else {
+            // Уменьшение текущего баланса на цену продукта
+            currentBalance -= productPrice;
+            // Вывод сообщения о покупке
+            document.write('The third product purchased<br>');
+        }
+    }
+    // Вывод сообщения о завершении обработки третьей покупки
+    document.write('<br>', 'END');
+    document.write('Remaining balance: ' + currentBalance);
 </script>
 </body>
 </html>
