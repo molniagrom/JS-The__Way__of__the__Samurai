@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13__video</title>
+  </head>
+  <body>
+    <script>
+      let myConsole = {
+        name: "Alinych",
+        age: 16,
+      };
+
+      console.log(myConsole.age);
+
+      let girl = {
+        name: "Alinych",
+        age: 18,
+      };
+      girl.age = 16;
+
+      console.log(myConsole.age);
+
+      //   ............................................................
+
+      const laptop1 = {
+        name: "zenbook",
+        manufacturer: "ASUS",
+        price: 1000,
+      };
+      const laptop2 = {
+        name: "macbook",
+        manufacturer: {
+          title: "APPLE",
+          factoriesCount: 10,
+          factoryAddress: "China, CenhanLee 12",
+        },
+        price: 3000,
+      };
+      console.log(laptop2.manufacturer.factoryAddress);
+
+      laptop2.manufacturer.factoryAddress = "China, CenhanLee 19";
+
+      console.log(laptop2.manufacturer.factoryAddress);
+
+      const moneyTransfering = {
+        from: "Alinych",
+        to: "IT-INCUBATOR",
+        amount: 1500,
+      };
+
+      // ..................................................................
+
+      let room = {
+        wall1: {
+          hasWindow: true,
+          color: "white",
+          conditioner: {
+            manufacturer: "ASUS",
+            power: 220,
+          },
+        },
+        wall2: {
+          hasWindow: false,
+          color: "white",
+          conditioner: null,
+        },
+        wall3: {
+          hasWindow: false,
+          color: "white",
+          conditioner: null,
+        },
+        wall4: {
+          hasWindow: false,
+          color: "white",
+          conditioner: null,
+        },
+      };
+      console.log(room.wall1.conditioner.power);
+
+      // ........................................................................
+
+      const word0 = {
+        original: "Wassup",
+        translation: "Здарова",
+      };
+
+      const word1 = {
+        original: "Bye",
+        translation: "Покеда",
+      };
+
+      const word2 = {
+        original: "Programmer",
+        translation: "Программист",
+      };
+
+      const wordsCount = 3;
+
+      const notificationMessages = {
+        start: {
+            hello: 'Hello girl. You can learn English. Good Luck!',
+        },
+        result: {
+          finishSuccess: "Молодец. Good result!",
+          finishUnSuccess: "Молодец, но постарайся лучше.",
+        },
+      };
+
+      const settings = {
+        correctAnswersMinPercent: 50,
+      };
+
+      const result = {
+        correctAnswerCount: 0,
+      };
+
+      // --------------------------------------
+ 
+      alert(notificationMessages.start.hello);
+
+      const userAnswer0 = prompt(word0.original);
+      alert(userAnswer0 === word0.translation);
+      if (userAnswer0 === word0.translation) {
+        result.correctAnswerCount = result.correctAnswerCount + 1;
+      }
+
+      const userAnswer1 = prompt(word1.original);
+      alert(userAnswer1 === word1.translation);
+      if (userAnswer1 === word1.translation) {
+        result.correctAnswerCount = result.correctAnswerCount + 1;
+      }
+
+      const userAnswer2 = prompt(word2.original);
+      alert(userAnswer2 === word2.translation);
+      if (userAnswer2 === word2.translation) {
+        result.correctAnswerCount = result.correctAnswerCount + 1;
+      }
+
+      const userCorrectAnswerPercent =
+        (result.correctAnswerCount / wordsCount) * 100;
+
+      if (userCorrectAnswerPercent > settings.correctAnswersMinPercent) {
+        alert(resultMessages.result.finishSuccess);
+      } else {
+        alert(resultMessages.result.finishUnSuccess);
+      }
+    </script>
+  </body>
+</html>
